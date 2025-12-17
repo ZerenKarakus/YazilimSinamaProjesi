@@ -1,0 +1,36 @@
+﻿@model sınamadeneme.Models.PredictionResult
+
+<div class="container mt-4">
+
+    <h2>Analiz Sonuçları</h2>
+
+    <table class="table table-bordered mt-3">
+        <thead>
+            <tr>
+                <th>Model</th>
+                <th>İnsan (%)</th>
+                <th>AI (%)</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Logistic Regression</td>
+                <td>@Model.LogisticHuman.ToString("0.00")%</td>
+                <td>@Model.LogisticAI.ToString("0.00")%</td>
+            </tr>
+            <tr>
+                <td>Linear SVM</td>
+                <td>@Model.SvmHuman.ToString("0.00")%</td>
+                <td>@Model.SvmAI.ToString("0.00")%</td>
+            </tr>
+            <tr>
+                <td>Random Forest</td>
+                <td>@Model.RandomForestHuman.ToString("0.00")%</td>
+                <td>@Model.RandomForestAI.ToString("0.00")%</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="/Home" class="btn btn-secondary mt-3">Yeni Analiz</a>
+</div>

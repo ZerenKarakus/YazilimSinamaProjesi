@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Human or AI Tespiti";
+}
+
+<div class="container mt-4">
+    <h2>Makale Özeti Analizi – Human or AI?</h2>
+
+    <form method="post" asp-action="Analyze">
+        <div class="form-group">
+            <label>Analiz Edilecek Metni Girin:</label>
+            <textarea name="inputText" class="form-control" rows="8"></textarea>
+        </div>
+
+        <button class="btn btn-primary mt-3">Tahmin Et</button>
+    </form>
+
+    @if (ViewBag.Error != null)
+    {
+            <div class="alert alert-danger mt-3">@ViewBag.Error</div>
+    }
+</div>
